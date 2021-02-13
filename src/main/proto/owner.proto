@@ -1,5 +1,5 @@
 syntax = "proto3";
-
+import "google/protobuf/wrappers.proto";
 package fr.upec.episen.mounir;
 
 option java_multiple_files = true;
@@ -7,6 +7,7 @@ option java_package = "fr.upec.episen.mounir.proto";
 
 service Owner{
   rpc GetOwnerName(OwnerNameRequest) returns (OwnerNameReply){}
+
 }
 
 message OwnerNameRequest{
@@ -16,3 +17,8 @@ message OwnerNameRequest{
 message OwnerNameReply{
   string name = 1;
 }
+
+
+
+
+
